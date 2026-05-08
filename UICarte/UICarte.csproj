@@ -13,4 +13,21 @@
   <Resource Include="Foto\**\*.jpg" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Remove="Font\mojangles.otf\**" />
+    <EmbeddedResource Remove="Font\mojangles.otf\**" />
+    <None Remove="Font\mojangles.otf\**" />
+    <Page Remove="Font\mojangles.otf\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Font\mojangles.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Font\mojangles.otf">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
 </Project>

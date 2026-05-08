@@ -66,21 +66,23 @@
 
 
                         <TextBlock Text="Fish"
+                               FontFamily="./Font/#Mojangles"
                                Foreground="White"
                                HorizontalAlignment="Center"
-                               VerticalAlignment="Center"
+                               VerticalAlignment="Bottom"
                                FontWeight="Bold"
                                FontSize="35"/>
                     </Border>
 
                     <!-- X -->
                     <TextBlock Text="X"
+                               FontFamily="./Font/#Mojangles"
                                Grid.Column="1"
                                Foreground="White"
                                FontSize="40"
                                FontWeight="Bold"
                                HorizontalAlignment="Center"
-                               VerticalAlignment="Center"
+                               VerticalAlignment="Bottom"
                                Panel.ZIndex="1"
                                Margin="0,0,0,8"/>
 
@@ -96,6 +98,7 @@
 
 
                         <TextBlock Text="Multiplier"
+                               FontFamily="./Font/#Mojangles"
                                Foreground="White"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"
@@ -116,6 +119,7 @@
             Margin="5">
 
             <GroupBox Header="Menù"
+                FontFamily="./Font/#Mojangles"
                 Foreground="White" 
                 BorderBrush="White" 
                 BorderThickness="1" 
@@ -129,7 +133,11 @@
                         Background="Crimson"
                         BorderThickness="4"
                         BorderBrush="AliceBlue"
-                        Margin="5,20,5,0" Height="130">
+                        Margin="5,20,5,0" Height="130"
+                        MouseEnter="Btn_Hover_Enter_Red"
+                        MouseLeave="Btn_Hover_Leave"
+                        MouseDown="Btn_Click_Info"
+                        Cursor="Hand">
 
                         <Button x:Name="BtnInfo"
                             Content="Info"
@@ -139,8 +147,10 @@
                             FontSize="30"
                             BorderThickness="0"
                             Background="Transparent"
-                            ToolTip="Bottone"/>
-                        
+                            ToolTip="Bottone" 
+                            IsHitTestVisible="False"/>
+                        <!-- Il bottone non prende più eventi -->
+
                     </Border>
 
                     <!-- Bottone Blu -->
@@ -149,7 +159,10 @@
                         Background="Blue"
                         BorderThickness="4"
                         BorderBrush="AliceBlue"
-                        Margin="5,20,5,0" Height="130">
+                        Margin="5,20,5,0" Height="130"
+                        MouseEnter="Btn_Hover_Enter_Blue"
+                        MouseLeave="Btn_Hover_Leave"
+                        Cursor="Hand">
 
                         <Button x:Name="BtnScarta"
                             Content="Scarta"
@@ -159,7 +172,8 @@
                             FontWeight="Bold"
                             BorderThickness="0"
                             Background="Transparent"
-                            ToolTip="Bottone"/>
+                            ToolTip="Bottone"
+                            IsHitTestVisible="False"/>
                     </Border>
 
                     <!-- Bottone Verde -->
@@ -168,7 +182,10 @@
                         Background="Green"
                         BorderThickness="4"
                         BorderBrush="AliceBlue"
-                        Margin="5,20,5,0" Height="130">
+                        Margin="5,20,5,0" Height="130"
+                        MouseEnter="Btn_Hover_Enter_Green"
+                        MouseLeave="Btn_Hover_Leave"
+                        Cursor="Hand">
 
                         <Button x:Name="BtnTira"
                             Content="Tira"
@@ -178,8 +195,9 @@
                             FontWeight="Bold"
                             BorderThickness="0"
                             Background="Transparent"
-                            ToolTip="Bottone"/>
-                        
+                            ToolTip="Bottone"
+                            IsHitTestVisible="False"/>
+
                     </Border>
 
                     <!-- Impostazioni -->
@@ -189,7 +207,10 @@
                         Background="DarkOrange"
                         BorderThickness="4"
                         BorderBrush="AliceBlue"
-                        Margin="5,20,5,0" Height="50">
+                        Margin="5,20,5,0" Height="50"
+                        MouseEnter="Btn_Hover_Enter_Yellow"
+                        MouseLeave="Btn_Hover_Leave"
+                        Cursor="Hand">
 
                         <Button x:Name="BtnImpostazioni"
                             Content="Impostazioni"
@@ -199,8 +220,9 @@
                             FontWeight="Bold"
                             BorderThickness="0"
                             Background="Transparent"
-                            ToolTip="Bottone"/>
-                        
+                            ToolTip="Bottone"
+                            IsHitTestVisible="False"/>
+
                     </Border>
                 </StackPanel>
             </GroupBox>
@@ -220,7 +242,7 @@
             BorderBrush="Transparent">
         </Border>
         
-        <Image Source="/Foto/Mazzo.png" 
+        <Image x:Name="Mazzo" Source="/Foto/Mazzo.png" 
                Panel.ZIndex="1" 
                Grid.Column="2"
                Grid.Row="2"
@@ -229,9 +251,12 @@
                HorizontalAlignment="Center"
                MaxHeight="200"
                MaxWidth="340"
-               Margin="0,0,0,8"/>
+               Margin="0,0,0,8"
+               MouseEnter="Hover_Opacity_Enter"
+               MouseLeave="Hover_Opacity_Leave"/>
 
         <TextBlock Text="Mazzo"
+                   FontFamily="./Font/#Mojangles"
                    Grid.Column="2"
                    Grid.Row="1"
                    FontSize="30"
@@ -245,18 +270,62 @@
         
         <!-- Box delle carte -->
         <Border
+            BorderThickness="0"
             Grid.Column="1"
             Grid.Row="2"
             CornerRadius="8"
-            Background="#293133"
-            Opacity="0.7"
             Panel.ZIndex="0"
             Grid.RowSpan="2"
             Margin="15,0,15,15"
             BorderBrush="Transparent">
+
+            <Border.Background>
+                <SolidColorBrush Color="#293133" Opacity="0.75"/>
+            </Border.Background>
+
+            <Grid x:Name="Grid_Carte"> <!-- Grid per posizionare le carte  -->
+
+                <Grid.ColumnDefinitions><!-- 4 Carte sopra -->
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Grid.RowDefinitions><!-- 4 sotto -->
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <!-- Xaml Carta singola le carte sono fatte nel C# questo mi serviva solo per avere i valori
+                <Border CornerRadius="8"
+                        Background="White"
+                        Margin="10"
+                        Panel.ZIndex="1" 
+                        Cursor="Hand">
+
+                    <StackPanel>
+                        <TextBlock Text="1"
+                                   Foreground="Black"
+                                   FontSize="30"
+                                   HorizontalAlignment="Center"/>
+
+                        <TextBlock Text="♥"
+                                   Foreground="Black"
+                                   FontSize="30"
+                                   HorizontalAlignment="Center"/>
+                    </StackPanel>
+
+                </Border> -->
+
+            </Grid>
+            
         </Border>
         
         <TextBlock Text="X / 8"
+                   FontFamily="./Font/#Mojangles"
                    Grid.Column="1"
                    Grid.Row="1"
                    FontSize="15"
