@@ -1,5 +1,0 @@
-{
-    "csharp.solution": "UICarte.sln",
-    "omnisharp.enableRoslynAnalyzers": true,
-    "omnisharp.enableEditorConfigSupport": true
-}
