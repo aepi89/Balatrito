@@ -204,7 +204,7 @@
 
                     <Border
                         CornerRadius="8"
-                        Background="DarkOrange"
+                        Background="#FF9800"
                         BorderThickness="4"
                         BorderBrush="AliceBlue"
                         Margin="5,20,5,0" Height="50"
@@ -213,10 +213,10 @@
                         Cursor="Hand">
 
                         <Button x:Name="BtnImpostazioni"
-                            Content="Impostazioni"
+                            Content="Opzioni"
                             Foreground="White"
                             VerticalContentAlignment="Center"
-                            FontSize="18"
+                            FontSize="23"
                             FontWeight="Bold"
                             BorderThickness="0"
                             Background="Transparent"

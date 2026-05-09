@@ -212,6 +212,17 @@ public partial class MainWindow : Window // Qua iniziano i metodi per l'UI
             default: return "?";
         }
     }
+    public Brush ColoreCarta(Carta carta) // Converto il seme nel suo rispettivo simbolo 
+    {
+        if (carta.OttieniSeme() == Seme.Cuori || carta.OttieniSeme() == Seme.Quadri)
+        {
+            return Brushes.Red;
+        }
+        else
+        {
+            return Brushes.Black;
+        }
+    }
     public Seme RandomSeme()
     {
         Random rnd_Seme = new Random(); // prende un seme rando dall'enum (0 non si scrive il max si mette n +1)
@@ -246,6 +257,7 @@ public partial class MainWindow : Window // Qua iniziano i metodi per l'UI
         TextBlock textBlockSeme = new TextBlock();// testo seme
         textBlockSeme.Text = SimboloSeme(carta.OttieniSeme()); // Il valore dei semi viene dopo dato da random
         textBlockSeme.FontSize = 30;
+        textBlockSeme.Foreground = ColoreCarta(carta);
         textBlockSeme.HorizontalAlignment = HorizontalAlignment.Center;
         textBlockSeme.VerticalAlignment = VerticalAlignment.Bottom;
 
@@ -281,16 +293,15 @@ public partial class MainWindow : Window // Qua iniziano i metodi per l'UI
         {
             if (border.Tag is not null && border.Margin.Top != -5) // Se non è alzata
             {
-                border.Tag = border.Margin; // Salviamo il vecchio margin
                 border.Margin = new Thickness(5, -5, 5, 5); // "Alziamo" la carta
                 border.Opacity = 1;
 
             }
             else
             {
-                if (border.Tag is not null && border.Tag is Thickness) // Controlliamo che in .Tag ci sia il dato corretto
+                if (border.Tag is not null) // Se è alzata
                 {
-                    border.Margin = (Thickness)border.Tag;
+                    border.Margin = new Thickness(10); // Le carte non selezionate sono sempre margin 10
                 }
             }
 

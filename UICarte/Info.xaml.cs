@@ -18,4 +18,27 @@ public partial class Info : Window
     {
         InitializeComponent();
     }
+
+    // ======== METODI Generali ========
+    private void Hover_Opacity_Enter(object sender, MouseEventArgs e)
+    {
+        if (sender is FrameworkElement elemento) //FrameworkElement è la classe base degli elementi visuali
+        {
+            elemento.Tag = elemento.Opacity; // Salviamo l'opacità originale
+            elemento.Opacity = 0.7;
+        }
+    }
+    private void Hover_Opacity_Leave(object sender, MouseEventArgs e)
+    {
+        if (sender is FrameworkElement elemento)
+        {
+            if (elemento.Tag is not null && elemento.Tag is Double)
+            {
+                Double opacitàOriginale = (Double)elemento.Tag; // In WPF l'opacità è un double non un float
+                elemento.Opacity = opacitàOriginale;
+            }
+        }
+    }
+
+
 }

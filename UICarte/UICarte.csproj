@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-  <Resource Include="Foto\**\*.png" />
+  <Resource Include="Foto\**\*.png" /> <!-- Cartelle delle foto -->
   <Resource Include="Foto\**\*.jpg" />
   </ItemGroup>
 

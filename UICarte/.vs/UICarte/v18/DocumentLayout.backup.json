@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\teseo\\Desktop\\UICarte\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{78496BE3-9DB9-2635-F5EB-BF06D87CEAF7}|UICarte.csproj|c:\\users\\teseo\\desktop\\uicarte\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{78496BE3-9DB9-2635-F5EB-BF06D87CEAF7}|UICarte.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{78496BE3-9DB9-2635-F5EB-BF06D87CEAF7}|UICarte.csproj|c:\\users\\teseo\\desktop\\uicarte\\info.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{78496BE3-9DB9-2635-F5EB-BF06D87CEAF7}|UICarte.csproj|solutionrelative:info.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{78496BE3-9DB9-2635-F5EB-BF06D87CEAF7}|UICarte.csproj|c:\\users\\teseo\\desktop\\uicarte\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -23,15 +23,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\teseo\\Desktop\\UICarte\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\teseo\\Desktop\\UICarte\\MainWindow.xaml.cs",
-              "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-07T16:40:36.477Z",
-              "IsPinned": true,
+              "Title": "Info.xaml",
+              "DocumentMoniker": "C:\\Users\\teseo\\Desktop\\UICarte\\Info.xaml",
+              "RelativeDocumentMoniker": "Info.xaml",
+              "ToolTip": "C:\\Users\\teseo\\Desktop\\UICarte\\Info.xaml",
+              "RelativeToolTip": "Info.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-09T17:35:24.159Z",
               "EditorCaption": ""
             },
             {
