@@ -23,7 +23,7 @@ public partial class MainWindow : Window // Qua iniziano i metodi per l'UI
 
     private int _punteggioTotale = 0; // Il punteggio del giocatore è cumulativo
     private int _turno = 1;
-    private int _punteggioDaBattere = 100; // Piccolo buio iniziale
+    private int _punteggioDaBattere = 100; // Piccolo obbiettivo iniziale iniziale
     public MainWindow()
     {
         InitializeComponent();
@@ -421,7 +421,7 @@ public partial class MainWindow : Window // Qua iniziano i metodi per l'UI
 
         if (Turnosuperato())
         {
-            Text_Punteggio.Text = $"{_punteggioTotale}";
+            Text_Da_Superare.Text = $"{_punteggioDaBattere}";
             mazzo.CompilaMazzo(); // Riempiamo di nuovo il mazzo per il nuovo turno
         }
     }
