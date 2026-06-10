@@ -18,6 +18,7 @@ namespace UICarte;
 public partial class MainWindow : Window // Qua iniziano i metodi per l'UI
 {
 
+    private MediaPlayer mediaPlayer = new MediaPlayer();
     private Mano mano = new Mano();
     private Mazzo mazzo = new Mazzo();
 
@@ -27,10 +28,42 @@ public partial class MainWindow : Window // Qua iniziano i metodi per l'UI
     public MainWindow()
     {
         InitializeComponent();
+        InizializzaAudio();
         RiempiMano();
         StampaMano();
-        
     }
+
+    /* ======== METODI per soundtrack ========
+     * (Music track: Cheese by Lukrembo                                   
+     * No Copyright Vlog Music for Video) 
+     * Source: https://freetouse.com/music */
+
+    private void InizializzaAudio()
+    {
+        // Apri il file usando un percorso relativo (UriKind)
+        mediaPlayer.Open(new Uri("Lukrembo-Cheese (freetouse.com).mp3", UriKind.Relative));
+        mediaPlayer.Play();
+    }
+
+    private void Megafono_Click(object sender, RoutedEventArgs e)
+    {
+        if(megafono.Opacity != 1)
+        {
+            megafono.Opacity = 1;
+            mediaPlayer.Play();
+        }
+        else
+        {
+            megafono.Opacity = 0.6;
+            mediaPlayer.Pause();
+        }
+    }
+
+    private void Regola_Volume(object sender, RoutedPropertyChangedEventArgs<double> e)
+    {
+        mediaPlayer.Volume = e.NewValue;
+    }
+
 
     // ======== METODI PER EVENTI BOTTONI (Hover) ========
 
@@ -95,6 +128,22 @@ public partial class MainWindow : Window // Qua iniziano i metodi per l'UI
         nuovaSchermata.Show();// Mostriamo la finestra
     }
 
+    private void Btn_Impostazioni(object sender, MouseButtonEventArgs e)
+    {
+        if(sender is Border border && Schermata_Impostazioni.Visibility == Visibility.Hidden)
+        {
+            Schermata_Impostazioni.Visibility = Visibility.Visible;
+            Box_carte.IsHitTestVisible = false;
+            BtnInfo.IsHitTestVisible = false;
+        }
+        else
+        {
+            Schermata_Impostazioni.Visibility = Visibility.Hidden;
+            Box_carte.IsHitTestVisible = true;
+            BtnInfo.IsHitTestVisible = true ;
+        }
+    }
+
     // ======== METODI Generali ========
     private void Hover_Opacity_Enter(object sender, MouseEventArgs e)
     {
@@ -123,6 +172,21 @@ public partial class MainWindow : Window // Qua iniziano i metodi per l'UI
             case Seme.Picche: return "♠";
             default: return "?";
         }
+    }
+
+    private void CambiaMazzo(object sender, MouseButtonEventArgs e)
+    {
+        if (MazzoDiCarte.Source.ToString().Contains("MazzoCinese.png"))
+        {
+            MazzoDiCarte.Source = new BitmapImage(new Uri("/Foto/Mazzo.png", UriKind.Relative));
+            Cambia_mazzo.Source = new BitmapImage(new Uri("/Foto/Mazzo.png", UriKind.Relative));
+        }
+        else
+        {
+            MazzoDiCarte.Source = new BitmapImage(new Uri("/Foto/MazzoCinese.png", UriKind.Relative));
+            Cambia_mazzo.Source = new BitmapImage(new Uri("/Foto/MazzoCinese.png", UriKind.Relative));
+        }
+
     }
     public string SimboloValore(Valore valore) // Converto il valore nel suo rispettivo simbolo 
     {
@@ -425,6 +489,4 @@ public partial class MainWindow : Window // Qua iniziano i metodi per l'UI
             mazzo.CompilaMazzo(); // Riempiamo di nuovo il mazzo per il nuovo turno
         }
     }
-
-    
 }

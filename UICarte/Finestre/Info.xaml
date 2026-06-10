@@ -44,7 +44,7 @@
                        VerticalAlignment="Center"
                        FontWeight="Bold"
                        FontSize="35"
-                       FontFamily="../Font/#Mojangles"
+                       FontFamily="../Font/#Minecraft"
                        Foreground="White"/>
 
         <!-- ===========CARTA ALTA=========== -->
@@ -72,7 +72,7 @@
                        VerticalAlignment="Center"
                        FontWeight="Bold"
                        FontSize="20"
-                       FontFamily="../Font/#Mojangles"
+                       FontFamily="../Font/#Minecraft"
                        Foreground="White">
 
                 <TextBlock.Effect>
@@ -120,7 +120,7 @@
 
                     <TextBlock Text="5"
                                Foreground="White"
-                               FontFamily="../Font/#Mojangles"
+                               FontFamily="../Font/#Minecraft"
                                FontSize="19"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Center"/>
@@ -131,7 +131,7 @@
                 <TextBlock Text="X"
                            Grid.Column="1"
                            Foreground="White"
-                           FontFamily="../Font/#Mojangles"
+                           FontFamily="../Font/#Minecraft"
                            FontSize="23"
                            Margin="5"
                            VerticalAlignment="Center"
@@ -152,7 +152,7 @@
 
                     <TextBlock Text="1"
                                Foreground="White"
-                               FontFamily="../Font/#Mojangles"
+                               FontFamily="../Font/#Minecraft"
                                FontSize="19"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Center"/>
@@ -187,7 +187,7 @@
                        VerticalAlignment="Center"
                        FontWeight="Bold"
                        FontSize="20"
-                       FontFamily="../Font/#Mojangles"
+                       FontFamily="../Font/#Minecraft"
                        Foreground="White">
 
                 <TextBlock.Effect>
@@ -235,7 +235,7 @@
 
                     <TextBlock Text="10"
                                Foreground="White"
-                               FontFamily="../Font/#Mojangles"
+                               FontFamily="../Font/#Minecraft"
                                FontSize="19"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Center"/>
@@ -246,7 +246,7 @@
                 <TextBlock Text="X"
                            Grid.Column="1"
                            Foreground="White"
-                           FontFamily="../Font/#Mojangles"
+                           FontFamily="../Font/#Minecraft"
                            FontSize="23"
                            Margin="5"
                            VerticalAlignment="Center"
@@ -267,7 +267,7 @@
 
                     <TextBlock Text="2"
                                Foreground="White"
-                               FontFamily="../Font/#Mojangles"
+                               FontFamily="../Font/#Minecraft"
                                FontSize="19"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Center"/>
@@ -302,7 +302,7 @@
                        VerticalAlignment="Center"
                        FontWeight="Bold"
                        FontSize="20"
-                       FontFamily="../Font/#Mojangles"
+                       FontFamily="../Font/#Minecraft"
                        Foreground="White">
 
                 <TextBlock.Effect>
@@ -350,7 +350,7 @@
 
                     <TextBlock Text="20"
                                Foreground="White"
-                               FontFamily="../Font/#Mojangles"
+                               FontFamily="../Font/#Minecraft"
                                FontSize="19"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Center"/>
@@ -361,7 +361,7 @@
                 <TextBlock Text="X"
                            Grid.Column="1"
                            Foreground="White"
-                           FontFamily="../Font/#Mojangles"
+                           FontFamily="../Font/#Minecraft"
                            FontSize="23"
                            Margin="5"
                            VerticalAlignment="Center"
@@ -382,7 +382,7 @@
 
                     <TextBlock Text="2"
                                Foreground="White"
-                               FontFamily="../Font/#Mojangles"
+                               FontFamily="../Font/#Minecraft"
                                FontSize="19"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Center"/>
@@ -417,7 +417,7 @@
                        VerticalAlignment="Center"
                        FontWeight="Bold"
                        FontSize="20"
-                       FontFamily="../Font/#Mojangles"
+                       FontFamily="../Font/#Minecraft"
                        Foreground="White">
 
                 <TextBlock.Effect>
@@ -465,7 +465,7 @@
 
                     <TextBlock Text="30"
                                Foreground="White"
-                               FontFamily="../Font/#Mojangles"
+                               FontFamily="../Font/#Minecraft"
                                FontSize="19"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Center"/>
@@ -476,7 +476,7 @@
                 <TextBlock Text="X"
                            Grid.Column="1"
                            Foreground="White"
-                           FontFamily="../Font/#Mojangles"
+                           FontFamily="../Font/#Minecraft"
                            FontSize="23"
                            Margin="5"
                            VerticalAlignment="Center"
@@ -497,7 +497,7 @@
 
                     <TextBlock Text="3"
                                Foreground="White"
-                               FontFamily="../Font/#Mojangles"
+                               FontFamily="../Font/#Minecraft"
                                FontSize="19"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Center"/>
@@ -533,7 +533,7 @@
                        VerticalAlignment="Center"
                        FontWeight="Bold"
                        FontSize="20"
-                       FontFamily="../Font/#Mojangles"
+                       FontFamily="../Font/#Minecraft"
                        Foreground="White">
 
                 <TextBlock.Effect>
@@ -581,7 +581,7 @@
 
                     <TextBlock Text="30"
                                Foreground="White"
-                               FontFamily="../Font/#Mojangles"
+                               FontFamily="../Font/#Minecraft"
                                FontSize="19"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Center"/>
@@ -592,7 +592,7 @@
                 <TextBlock Text="X"
                            Grid.Column="1"
                            Foreground="White"
-                           FontFamily="../Font/#Mojangles"
+                           FontFamily="../Font/#Minecraft"
                            FontSize="23"
                            Margin="5"
                            VerticalAlignment="Center"
@@ -613,7 +613,7 @@
 
                     <TextBlock Text="4"
                                Foreground="White"
-                               FontFamily="../Font/#Mojangles"
+                               FontFamily="../Font/#Minecraft"
                                FontSize="19"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Center"/>
@@ -648,7 +648,7 @@
                VerticalAlignment="Center"
                FontWeight="Bold"
                FontSize="20"
-               FontFamily="../Font/#Mojangles"
+               FontFamily="../Font/#Minecraft"
                Foreground="White">
 
                 <TextBlock.Effect>
@@ -696,7 +696,7 @@
 
                     <TextBlock Text="35"
                        Foreground="White"
-                       FontFamily="../Font/#Mojangles"
+                       FontFamily="../Font/#Minecraft"
                        FontSize="19"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"/>
@@ -707,7 +707,7 @@
                 <TextBlock Text="X"
                    Grid.Column="1"
                    Foreground="White"
-                   FontFamily="../Font/#Mojangles"
+                   FontFamily="../Font/#Minecraft"
                    FontSize="23"
                    Margin="5"
                    VerticalAlignment="Center"
@@ -728,7 +728,7 @@
 
                     <TextBlock Text="4"
                        Foreground="White"
-                       FontFamily="../Font/#Mojangles"
+                       FontFamily="../Font/#Minecraft"
                        FontSize="19"
                        VerticalAlignment="Center"
                        HorizontalAlignment="Center"/>
@@ -763,7 +763,7 @@
                        VerticalAlignment="Center"
                        FontWeight="Bold"
                        FontSize="20"
-                       FontFamily="../Font/#Mojangles"
+                       FontFamily="../Font/#Minecraft"
                        Foreground="White">
 
                 <TextBlock.Effect>
@@ -811,7 +811,7 @@
 
                     <TextBlock Text="40"
                                Foreground="White"
-                               FontFamily="../Font/#Mojangles"
+                               FontFamily="../Font/#Minecraft"
                                FontSize="19"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Center"/>
@@ -822,7 +822,7 @@
                 <TextBlock Text="X"
                            Grid.Column="1"
                            Foreground="White"
-                           FontFamily="../Font/#Mojangles"
+                           FontFamily="../Font/#Minecraft"
                            FontSize="23"
                            Margin="5"
                            VerticalAlignment="Center"
@@ -843,7 +843,7 @@
 
                     <TextBlock Text="4"
                                Foreground="White"
-                               FontFamily="../Font/#Mojangles"
+                               FontFamily="../Font/#Minecraft"
                                FontSize="19"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Center"/>
@@ -878,7 +878,7 @@
                        VerticalAlignment="Center"
                        FontWeight="Bold"
                        FontSize="20"
-                       FontFamily="../Font/#Mojangles"
+                       FontFamily="../Font/#Minecraft"
                        Foreground="White">
 
                 <TextBlock.Effect>
@@ -926,7 +926,7 @@
 
                     <TextBlock Text="100"
                                Foreground="White"
-                               FontFamily="../Font/#Mojangles"
+                               FontFamily="../Font/#Minecraft"
                                FontSize="19"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Center"/>
@@ -937,7 +937,7 @@
                 <TextBlock Text="X"
                            Grid.Column="1"
                            Foreground="White"
-                           FontFamily="../Font/#Mojangles"
+                           FontFamily="../Font/#Minecraft"
                            FontSize="23"
                            Margin="5"
                            VerticalAlignment="Center"
@@ -958,7 +958,7 @@
 
                     <TextBlock Text="8"
                                Foreground="White"
-                               FontFamily="../Font/#Mojangles"
+                               FontFamily="../Font/#Minecraft"
                                FontSize="19"
                                VerticalAlignment="Center"
                                HorizontalAlignment="Center"/>

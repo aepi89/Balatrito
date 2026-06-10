@@ -6,12 +6,12 @@
         xmlns:local="clr-namespace:UICarte"
         mc:Ignorable="d"
         Title="Balatrito" 
-	    Height="630" Width="900">
+	    Height="630" Width="900"
+        MinHeight="630" MinWidth="900">
 
     <Window.Background>
         <ImageBrush ImageSource="/Foto/Background.jpg"></ImageBrush>
     </Window.Background>
-
 
     <Grid x:Name="Grid_Generale" Margin="1">
 
@@ -28,7 +28,6 @@
             <RowDefinition Height="210"/>
             <!-- Spazio per mazzo -->
             <RowDefinition Height="30"/>
-            <!-- Spazio per qualche scritta? -->
         </Grid.RowDefinitions>
 
         <!-- Box punti -->
@@ -67,7 +66,7 @@
 
 
                         <TextBlock x:Name="text_Fiche" Text="Fiche"
-                               FontFamily="../Font/#Mojangles"
+                               FontFamily="../Font/#Minecraft"
                                Foreground="White"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Bottom"
@@ -77,7 +76,7 @@
 
                     <!-- X -->
                     <TextBlock Text="X"
-                               FontFamily="../Font/#Mojangles"
+                               FontFamily="../Font/#Minecraft"
                                Grid.Column="1"
                                Foreground="White"
                                FontSize="40"
@@ -99,7 +98,7 @@
 
 
                         <TextBlock x:Name="text_Multiplier" Text="Multiplier"
-                               FontFamily="../Font/#Mojangles"
+                               FontFamily="../Font/#Minecraft"
                                Foreground="White"
                                HorizontalAlignment="Center"
                                VerticalAlignment="Center"
@@ -137,7 +136,7 @@
                    HorizontalAlignment="Center"
                    VerticalAlignment="Top"
                    Margin="0,15,0,0"
-                   FontFamily="../Font/#Mojangles"/>
+                   FontFamily="../Font/#Minecraft"/>
 
         <TextBlock x:Name="Text_Punteggio" Text="Punteggio"
                    Grid.Row="0"
@@ -147,7 +146,7 @@
                    FontSize="30"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Bottom"
-                   FontFamily="../Font/#Mojangles"/>
+                   FontFamily="../Font/#Minecraft"/>
         
         <StackPanel Grid.Row="1"
                     Grid.Column="2">
@@ -159,7 +158,7 @@
                        Margin="0,65,0,0"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
-                       FontFamily="../Font/#Mojangles"/>
+                       FontFamily="../Font/#Minecraft"/>
 
             <TextBlock x:Name="Text_Da_Superare" Text="100"
                        Foreground="White"
@@ -168,7 +167,7 @@
                        Margin="0,25,0,0"
                        HorizontalAlignment="Center"
                        VerticalAlignment="Center"
-                       FontFamily="../Font/#Mojangles"/>
+                       FontFamily="../Font/#Minecraft"/>
 
         </StackPanel>
 
@@ -181,7 +180,7 @@
             Margin="5">
 
             <GroupBox Header="Menù"
-                FontFamily="../Font/#Mojangles"
+                FontFamily="../Font/#Minecraft"
                 Foreground="White" 
                 BorderBrush="White" 
                 BorderThickness="1" 
@@ -190,7 +189,7 @@
                 <StackPanel>
 
                     <!-- Bottone Rosso -->
-                    <Border
+                    <Border x:Name="BtnInfo"
                         CornerRadius="8"
                         Background="Crimson"
                         BorderThickness="4"
@@ -201,7 +200,7 @@
                         MouseDown="Btn_Click_Info"
                         Cursor="Hand">
 
-                        <Button x:Name="BtnInfo"
+                        <Button 
                             Content="Info"
                             Foreground="White"
                             VerticalContentAlignment="Center"
@@ -274,6 +273,7 @@
                         Margin="5,20,5,0" Height="50"
                         MouseEnter="Btn_Hover_Enter_Yellow"
                         MouseLeave="Btn_Hover_Leave"
+                        MouseDown="Btn_Impostazioni"
                         Cursor="Hand">
 
                         <Button x:Name="BtnImpostazioni"
@@ -293,6 +293,110 @@
         </Border>
         <!-- Fine Menù laterale -->
 
+        <!-- Schemata impostazioni -->
+
+        <Border x:Name="Schermata_Impostazioni"
+                CornerRadius="10"
+                Grid.ColumnSpan="3"
+                Grid.RowSpan="3"
+                Margin="50"
+                Panel.ZIndex="99"
+                BorderBrush="#FF9800"
+                BorderThickness="3"
+                Visibility="Hidden">
+
+            <Border.Background>
+                <SolidColorBrush Color="#293133" Opacity="0.96"/>
+            </Border.Background>
+
+            <GroupBox Header="Impostazioni"
+                      Foreground="White" 
+                      BorderBrush="White" 
+                      BorderThickness="1" 
+                      Margin="7,-2,7,7"
+                      FontFamily="../Font/#Minecraft">
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="3*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <TextBlock Text="Audio"
+                               FontSize="50"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Center"
+                               Grid.Row="1"/>
+
+                    <Image x:Name="megafono"
+                           Source="/Foto/Megafono.png"
+                           Grid.Row="1"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           MaxHeight="120"
+                           MouseDown="Megafono_Click"/>
+
+
+                    <Slider x:Name="Slider_volume"
+                            Margin="10"
+                            Minimum="0" 
+                            Maximum="1" 
+                            Value="50" 
+                            TickFrequency="0.1" 
+                            TickPlacement="BottomRight"
+                            Cursor="Hand"
+                            Grid.Row="2"
+                            VerticalAlignment="Center"
+                            ValueChanged="Regola_Volume"/>
+
+                    <TextBlock Text="Volume"
+                               FontSize="50"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Center"
+                               Grid.Row="2"/>
+
+                    <CheckBox x:Name="CRT_Switch"
+                              Grid.Column="2"
+                              Grid.Row="1"
+                              Foreground="White"
+                              Content="Effetto CRT"
+                              HorizontalAlignment="Left"
+                              VerticalAlignment="Center">
+
+                            <CheckBox.LayoutTransform>
+                                <ScaleTransform ScaleX="2.5" ScaleY="2.5" />
+                            </CheckBox.LayoutTransform>
+                    </CheckBox>
+
+                    <StackPanel Grid.Column="2"
+                                Grid.RowSpan="2"
+                                Grid.Row="2">
+
+                                <TextBlock Text="Mazzo"
+                                           FontSize="50"
+                                           VerticalAlignment="Top"
+                                           HorizontalAlignment="Center"/>
+
+                        <Image x:Name="Cambia_mazzo"
+                                       Source="/Foto/MazzoCinese.png"
+                                       Margin="0"
+                                       MaxWidth="100"
+                                       MouseDown="CambiaMazzo"/>
+                    </StackPanel>
+
+                </Grid>
+            </GroupBox>
+        </Border>
+
+
         <!-- Mazzo -->
         <Border
             Grid.Column="2"
@@ -306,7 +410,7 @@
             BorderBrush="Transparent">
         </Border>
 
-        <Image x:Name="MazzoDiCarte" Source="/Foto/Mazzo.png" 
+        <Image x:Name="MazzoDiCarte" Source="/Foto/MazzoCinese.png" 
                Panel.ZIndex="1" 
                Grid.Column="2"
                Grid.Row="2"
@@ -320,7 +424,7 @@
                MouseLeave="Hover_Opacity_Leave"/>
 
         <TextBlock Text="Mazzo"
-                   FontFamily="../Font/#Mojangles"
+                   FontFamily="../Font/#Minecraft"
                    Grid.Column="2"
                    Grid.Row="1"
                    FontSize="30"
@@ -333,7 +437,7 @@
         <!-- Fine mazzo -->
 
         <!-- Box delle carte -->
-        <Border
+        <Border x:Name="Box_carte"
             BorderThickness="0"
             Grid.Column="1"
             Grid.Row="2"
@@ -392,7 +496,7 @@
         </Border>
 
         <TextBlock x:Name="Text_turno" Text="Turno : 1"
-                   FontFamily="../Font/#Mojangles"
+                   FontFamily="../Font/#Minecraft"
                    Grid.Column="1"
                    Grid.Row="1"
                    FontSize="15"

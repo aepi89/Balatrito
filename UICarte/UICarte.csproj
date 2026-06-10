@@ -21,13 +21,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Font\mojangles.otf" />
+    <None Remove="Font\Minecraft.otf" />
+    <None Remove="Lukrembo-Cheese %28freetouse.com%29.mp3" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Font\mojangles.otf">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
+    <Content Include="Lukrembo-Cheese (freetouse.com).mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Font\Minecraft.otf" />
   </ItemGroup>
 
 </Project>
