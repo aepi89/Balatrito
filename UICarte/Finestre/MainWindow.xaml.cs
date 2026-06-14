@@ -144,6 +144,23 @@ public partial class MainWindow : Window // Qua iniziano i metodi per l'UI
         }
     }
 
+    // ======== Checkbox impostzaioni ========
+    private void CRT_Switch_Checked(object sender, RoutedEventArgs e)
+    {
+        if (sender is CheckBox checkBox && CRT_effect != null)
+        {
+            CRT_effect.Visibility = Visibility.Visible;
+        }
+    }
+
+    private void CRT_Switch_Unchecked(object sender, RoutedEventArgs e)
+    {
+        if (sender is CheckBox checkBox && CRT_effect != null)
+        {
+            CRT_effect.Visibility = Visibility.Hidden;
+        }
+    }
+
     // ======== METODI Generali ========
     private void Hover_Opacity_Enter(object sender, MouseEventArgs e)
     {

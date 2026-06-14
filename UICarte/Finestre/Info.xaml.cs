@@ -39,5 +39,4 @@ public partial class Info : Window
             }
         }
     }
-
 }

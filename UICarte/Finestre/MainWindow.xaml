@@ -364,12 +364,15 @@
                                Grid.Row="2"/>
 
                     <CheckBox x:Name="CRT_Switch"
+                              IsChecked="True"
                               Grid.Column="2"
                               Grid.Row="1"
                               Foreground="White"
                               Content="Effetto CRT"
                               HorizontalAlignment="Left"
-                              VerticalAlignment="Center">
+                              VerticalAlignment="Center"
+                              Checked="CRT_Switch_Checked"
+                              Unchecked="CRT_Switch_Unchecked">
 
                             <CheckBox.LayoutTransform>
                                 <ScaleTransform ScaleX="2.5" ScaleY="2.5" />
@@ -506,7 +509,31 @@
                    VerticalAlignment="Bottom"    
                    Margin="0,0,30,5"
                    Panel.ZIndex="1"/>
-        <!-- Carte selezionate -->
+        <!-- Effetto CRT -->
+
+        <Rectangle x:Name="CRT_effect" Visibility="Visible"
+                   IsHitTestVisible="False" Opacity="0.3" 
+                   Grid.ColumnSpan="3" Grid.RowSpan="4">
+            <Rectangle.Fill>
+                <DrawingBrush Viewport="0,0,1,4" ViewportUnits="Absolute" TileMode="Tile">
+                    <DrawingBrush.Drawing>
+                        <DrawingGroup>
+                            <GeometryDrawing Brush="#FF000000">
+                                <GeometryDrawing.Geometry>
+                                    <RectangleGeometry Rect="0,0,1,2"/>
+                                </GeometryDrawing.Geometry>
+                            </GeometryDrawing>
+                            <GeometryDrawing Brush="Transparent">
+                                <GeometryDrawing.Geometry>
+                                    <RectangleGeometry Rect="0,2,1,2"/>
+                                </GeometryDrawing.Geometry>
+                            </GeometryDrawing>
+                        </DrawingGroup>
+                    </DrawingBrush.Drawing>
+                </DrawingBrush>
+            </Rectangle.Fill>
+        </Rectangle>
+
 
     </Grid>
 </Window>
